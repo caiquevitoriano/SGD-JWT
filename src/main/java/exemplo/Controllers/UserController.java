@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     //Mapeando a URL /users
-
     @RequestMapping("/users")
-    @ResponseBody
+    @ResponseBody   // Com essa anotação, quando uma requisição especificar em seu header que aceita application/json
+                    // os dados serão retornados para o client em formato JSON.
     public String getUsers() {
 
         //Retornando um JSON simples quando ela for acessada.
