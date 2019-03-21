@@ -1,4 +1,4 @@
-package exemplo.Security;
+package exemplo.SGDJWT.Security;
 
 import org.springframework.context.annotation.Configuration;
 
@@ -18,9 +18,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
+
 		httpSecurity.csrf().disable().authorizeRequests()
-				.antMatchers("/home").permitAll()
-				.antMatchers(HttpMethod.POST, "/login").permitAll()
+				.antMatchers("/hello").permitAll()
+				.antMatchers(HttpMethod.POST, "/users").permitAll()
 				.anyRequest().authenticated()
 				.and()
 				// Todos podem acessar /home, e que o/login está disponível

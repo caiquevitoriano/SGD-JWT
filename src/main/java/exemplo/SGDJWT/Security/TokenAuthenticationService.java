@@ -1,4 +1,4 @@
-package exemplo.Security;
+package exemplo.SGDJWT.Security;
 
 import java.util.Collections;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package exemplo.Security;
+package exemplo.SGDJWT.Security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.authentication.AuthenticationManager;

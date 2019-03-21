@@ -1,7 +1,8 @@
-package exemplo.Controllers;
+package exemplo.SGDJWT.Controllers;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,5 +19,16 @@ public class UserController {
         return "{\"users\":[{\"name\":\"Caique\", \"country\":\"Brasil\"}," +
                 "{\"name\":\"Alexa\",\"country\":\"Japão\"}]}";
     }
+
+    @RequestMapping(method = RequestMethod.POST, path = "/users")
+    @ResponseBody   // Com essa anotação, quando uma requisição especificar em seu header que aceita application/json
+                     // os dados serão retornados para o client em formato JSON.
+    public String getUsers2() {
+
+        //Retornando um JSON simples quando ela for acessada.
+        return "{\"users\":[{\"name\":\"Caique\", \"country\":\"Brasil\"}," +
+                "{\"name\":\"Alexa\",\"country\":\"Japão\"}]}";
+    }
+
 
 }

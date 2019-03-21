@@ -1,4 +1,4 @@
-package exemplo.Security;
+package exemplo.SGDJWT.Security;
 
 public class AccountCredentials {
 
